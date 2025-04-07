@@ -1,0 +1,137 @@
+
+.recipeContainer {
+  position: relative;
+  min-height: 100vh;
+}
+
+.backgroundImage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  filter: blur(5px);
+  z-index: 0;
+}
+
+.contentCard {
+  background-color: rgba(255, 252, 240, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.ingredientsCard {
+  background-color: rgba(255, 252, 240, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.ingredientsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ingredientItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+}
+
+.ingredientName {
+  font-weight: 500;
+}
+
+.ingredientQuantity {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.tag {
+  background-color: rgba(255, 252, 240, 0.8);
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  font-weight: 500;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+}
+
+.procedureText {
+  white-space: pre-line;
+  line-height: 1.8;
+}
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+/* Animation styles */
+.fadeIn {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@media (max-width: 768px) {
+  .contentCard, 
+  .ingredientsCard {
+    padding: 1.5rem;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .ingredientItem {
+    padding: 0.5rem 0;
+  }
+}
